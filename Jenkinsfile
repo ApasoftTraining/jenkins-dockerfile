@@ -18,9 +18,9 @@ pipeline {
         stage('Test') {
             steps {
                     echo 'Testing the web application...'
-                    sh 'echo This is a test file > test.txt'
+                    sh 'echo This is a test file > /example/test.txt'
                     
-                    sh 'curl http://localhost:9191'
+                    sh 'sleep 60' //1 minute timeout to test the application
             }
         }
     }
