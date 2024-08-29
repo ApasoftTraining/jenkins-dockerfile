@@ -4,7 +4,7 @@ pipeline {
             filename 'Dockerfile'  //Dockerfile name
             dir '.'  // The directory where the Dockerfile is located
             additionalBuildArgs '--tag apasoft/web1'  // If necessary, additional build arguments can be passed
-            args '-p 9191:80 -v /tmp/docker-example:/example'
+            args '-p 9191:80 '
         }
     }
 
