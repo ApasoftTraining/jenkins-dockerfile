@@ -18,10 +18,8 @@ pipeline {
         stage('Testing the WEB app') {
             steps {
                     //Start Apache   
-                      sh 'httpd-foreground'
-                    echo 'Testing the web application...'
-                    
-                    
+                     
+                    echo 'Testing the web application...'                    
                     sh 'sleep 60' //1 minute timeout to test the application
             }
         }
