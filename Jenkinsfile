@@ -4,7 +4,7 @@ pipeline {
             filename 'Dockerfile'  //Dockerfile name
             dir '.'  // The directory where the Dockerfile is located
             additionalBuildArgs '--tag apasoft/web1'  // If necessary, additional build arguments can be passed
-            args '-p 9191:80 -v /home/jenkins/temp:/'
+            args '-p 9191:80 -v /home/jenkins/docker-example:/example'
         }
     }
 
@@ -18,6 +18,7 @@ pipeline {
         stage('Test') {
             steps {
                     echo 'Testing the web application...'
+                    sh 'echo This is a test file > test.txt'
                     
                     sh 'curl http://localhost:9191'
             }
