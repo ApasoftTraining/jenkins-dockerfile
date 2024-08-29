@@ -15,8 +15,10 @@ pipeline {
                     // Here, Jenkins will build the image using the specified Dockerfile                
             }
         }
-        stage('Test') {
+        stage('Testing the WEB app') {
             steps {
+                    //Start Apache   
+                      sh 'httpd-foreground'
                     echo 'Testing the web application...'
                     
                     
